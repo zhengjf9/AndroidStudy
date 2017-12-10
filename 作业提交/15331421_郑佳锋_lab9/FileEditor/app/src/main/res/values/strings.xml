@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FileEditor</string>
+    <string name="new_pwd">New Password</string>
+    <string name="confirm_pwd">Confirm Password</string>
+    <string name="ok">OK</string>
+    <string name="clear">CLEAR</string>
+    <string name="file_editor">File Editor</string>
+    <string name="file_name">File Name</string>
+    <string name="file_content">File Content Here</string>
+    <string name="save">SAVE</string>
+    <string name="load">LOAD</string>
+    <string name="delete">DELETE</string>
+</resources>
