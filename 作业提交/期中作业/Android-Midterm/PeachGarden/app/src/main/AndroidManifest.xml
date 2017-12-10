@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.zyuco.peachgarden">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_round"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".StartupActivity"
+            android:theme="@style/AppTheme.splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".DetailActivity"/>
+        <activity android:name=".UnlockActivity"/>
+        <activity android:name=".UnlockingActivity"/>
+        <activity android:name=".UnlockSuccessActivity"/>
+        <activity android:name=".AboutActivity"/>
+        <activity android:name=".ModifyActivity"/>
+        <activity android:name=".EncyclopediaActivity"/>
+        <activity android:name=".AvatarSelectActivity"/>
+        <activity android:name=".SearchActivity"/>
+    </application>
+
+</manifest>

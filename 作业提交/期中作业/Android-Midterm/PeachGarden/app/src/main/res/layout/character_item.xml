@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="120dp"/>
+
+    <View
+        android:id="@+id/locked_mask"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.1"
+        android:background="#000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/border"
+        app:layout_constraintLeft_toLeftOf="@id/border"
+        app:layout_constraintRight_toRightOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/border"/>
+
+    <TextView
+        android:id="@+id/locked_mask_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/locked"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="90sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/border"
+        app:layout_constraintLeft_toLeftOf="@id/border"
+        app:layout_constraintRight_toRightOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/border"/>
+
+
+    <ImageView
+        android:id="@+id/border"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/border"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:text="名字"
+        android:textColor="#000"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/border"
+        app:layout_constraintTop_toTopOf="@id/border"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/character_card_belong"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintRight_toLeftOf="@id/right_margin"/>
+
+    <TextView
+        android:id="@+id/belong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="国家"
+        android:textColor="#000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="@id/right_margin"/>
+
+    <TextView
+        android:id="@+id/abstract_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:breakStrategy="simple"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="3"
+        android:text="描述"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/border"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintRight_toRightOf="@id/border"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+
+</android.support.constraint.ConstraintLayout>
